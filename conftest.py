@@ -25,7 +25,7 @@ def browser(request):
         fp.set_preference('intl.accept_languages', user_language)
         browser = webdriver.Firefox(firefox_profile=fp)
     else:
-        print('Browser {} still is not implemented'.format(browser_name))
+        print(f'Browser {browser_name} still is not implemented')
     yield browser
     print('\nquit browser..')
     browser.quit()
